@@ -17,6 +17,7 @@ function ResponsiveAutoExample() {
             <p className="custom-font-center" >
               在这个班级管理网站中，我们利用React和Bootstrap创建了一个响应式的界面。这个网站因大四没啥作业需要提交，已经转变为一个纯娱乐的网站了。
             </p>
+    
             <p className="custom-font-center">
             ↓↓↓ 放一个3d模型显得没那么空旷😂
             </p>

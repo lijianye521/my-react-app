@@ -100,6 +100,15 @@ const Login = () => {
   return (
     <Container className="mt-5">
       {!loggedIn && ( // 显示表单只有在未登录状态下才有效
+   <>
+      <div className="mt-3" style={{marginBottom: '10px'}}>
+      <a href="https://lijianye521.github.io/2023/08/08/JWT%E5%AD%A6%E4%B9%A0-%E7%99%BB%E5%BD%95%E9%80%BB%E8%BE%91%E5%AE%9E%E7%8E%B0/" target="_blank" rel="noopener noreferrer" className='custom-font' >
+       关于jwt的内容
+      </a>
+      <br />
+    </div>
+ 
+    
          <Form onSubmit={handleLogin}>
          <Form.Group controlId="formUsername" className='custom-font'>
            <Row>
@@ -133,6 +142,7 @@ const Login = () => {
            登录
          </Button>
        </Form>
+       </>
       )}
 
       {loggedIn && (
@@ -158,6 +168,7 @@ const Login = () => {
         </Alert>
       )}
     </Container>
+   
   );
 };
 

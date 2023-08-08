@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../YourCustomStyle.css'; // 导入自定义的CSS样式文件
 function CollapsibleExample() {
   return (
+   
     <Navbar  collapseOnSelect expand="lg" className="bg-body-tertiary custom-font"  fixed="top">
       <Container>
         <Navbar.Brand href="/">everything just for fun</Navbar.Brand>
@@ -35,6 +36,7 @@ function CollapsibleExample() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
   );
 }
 

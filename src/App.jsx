@@ -20,7 +20,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
         <Route path="/features" element={<Features />} />
-        <Route path="/submit-homework" element={<SubmitHomework />} />
+        <Route path="/homework" element={<SubmitHomework />} />
         <Route path="/aboutwebsite" element={<AboutWebsite />} />
         <Route path="/signin" element={<SignIn />} />
         {/* 如果你希望添加一个默认或根路由，可以像下面这样添加 */}
