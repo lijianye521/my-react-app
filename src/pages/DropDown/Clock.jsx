@@ -11,6 +11,8 @@ class FlipClock extends Component {
 
     render() {
         return (
+            <>
+            <p className='custom-font-center'>Feel the time</p>
             <div className="FlipClock">
                 <Flipper ref="flipperHour1" />
                 <Flipper ref="flipperHour2" />
@@ -21,6 +23,7 @@ class FlipClock extends Component {
                 <Flipper ref="flipperSecond1" />
                 <Flipper ref="flipperSecond2" />
             </div>
+            </>
         )
     }
 

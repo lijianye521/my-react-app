@@ -13,4 +13,42 @@
     font-style: normal;
     vertical-align: top;
 }
+
+@font-face {
+    font-family: 'CustomFont'; /* 自定义字体名称 */
+    src: url('/font/刘欢卡通手书2.0.ttf') format('truetype'); /* 字体文件路径 */
+  }
+  p {
+    font-family: 'CustomFont', sans-serif;
+    text-align: justify; /* 使文本两端对齐 */
+    text-indent: 2em;    /* 首行缩进两个字符宽度 */
+    line-height: 1.5;    /* 调整行间距，1.5是相对于字体大小的倍数，你可以根据需要调整这个值 */
+  }
+  
+    
+  .custom-font {
+    font-family: 'CustomFont', sans-serif;
+    text-indent: 0em;    /* 首行缩进两个字符宽度 */
+    text-align: center;
+  }
+  .custom-font-center {
+    font-family: 'CustomFont', sans-serif;
+    text-indent: 0em;    /* 首行缩进两个字符宽度 */
+    text-align: center;
+  }
+  .custom-fontstrong {
+    font-family: 'CustomFont', sans-serif;
+    font-weight: bolder;
+  }
+
+.top-bar {
+    height: 50px; /* 调整空的div高度，以适应你的导航栏高度 */
+  }
+
+.img-with-yellow-border {
+    border: 2px solid #FFD700; /* 定义浅黄色边框 */
+    padding: 10px; /* 可选，增加一些内边距使边框与图片之间有一些空间 */
+    margin-bottom: 10px;
+  }
+  
   
