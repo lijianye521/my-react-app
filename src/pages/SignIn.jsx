@@ -7,11 +7,10 @@ const Login = () => {
   const [accessAllowed, setAccessAllowed] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false); // 新增状态变量
   useEffect(() => {
-    // 在组件挂载时检查是否有存储的 token
-    const storedToken = localStorage.getItem('token');
-    if (storedToken) {
-      handleProtectedAccessWithToken(storedToken);
-    }
+    const tokenCheckInterval = setInterval(() => {
+      handleProtectedAccess();
+    }, 5000); // 500 毫秒即 0.5 秒
+    
   }, []);
 
   const handleUsernameChange = (event) => {
@@ -40,6 +39,7 @@ const Login = () => {
         localStorage.setItem('token', token); // 存储令牌
         setAccessAllowed(true); // 设置允许访问状态
         setLoggedIn(true); // 设置已登录状态
+
       } else {
         setAccessAllowed(false); // 设置不允许访问状态
         setLoggedIn(false); // 设置未登录状态
@@ -63,30 +63,6 @@ const Login = () => {
 
       if (response.ok) {
         setAccessAllowed(true);
-      } else {
-        setAccessAllowed(false);
-        setLoggedIn(false); // 设置未登录状态
-      }
-    } catch (error) {
-      console.error('An error occurred:', error);
-    }
-  };
-  const handleProtectedAccessWithToken = async (token) => {
-    if (!token) {
-        // 如果没有存储的 token，不进行访问
-        return;
-      }
-    try {
-      const response = await fetch('http://localhost:5000/protected', {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (response.ok) {
-        setAccessAllowed(true);
-        setLoggedIn(true); // 设置已登录状态
       } else {
         setAccessAllowed(false);
         setLoggedIn(false); // 设置未登录状态
@@ -156,17 +132,18 @@ const Login = () => {
         </Button>
       )}
 
-      {accessAllowed === true && (
-        <Alert className="mt-3" variant="success" style={{ fontFamily: 'CustomFont' }}>
-          允许访问
-        </Alert>
-      )}
+{accessAllowed === true && (
+  <Alert className="mt-3" variant="success" style={{ fontFamily: 'CustomFont' }}>
+    允许访问
+  </Alert>
+)}
 
-      {accessAllowed === false && (
-        <Alert className="mt-3" variant="danger">
-          不允许访问
-        </Alert>
-      )}
+{accessAllowed === false && (
+  <Alert className="mt-3" variant="danger">
+    不允许访问
+  </Alert>
+)}
+
     </Container>
    
   );

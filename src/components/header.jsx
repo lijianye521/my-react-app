@@ -15,7 +15,7 @@ function CollapsibleExample() {
             <Nav.Link href="features">主页</Nav.Link>
             <Nav.Link href="homework">提交作业</Nav.Link>
             <NavDropdown title="下拉菜单" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">还没想好</NavDropdown.Item>
+              <NavDropdown.Item href="chatgpt">不知道写啥</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 空位1
               </NavDropdown.Item>
@@ -29,7 +29,7 @@ function CollapsibleExample() {
           </Nav>
           <Nav >
             <Nav.Link href="signin">登录</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link  href="signup">
               注册
             </Nav.Link>
           </Nav>

@@ -9,11 +9,10 @@ import Home from './pages/Home';
 import SubmitHomework from './pages/SubmitHomework';
 import AboutWebsite from './pages/AboutWebsite';
 import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Router>
       <Header /> {/* 这里添加了你的导航栏组件 */}
@@ -23,8 +22,8 @@ function App() {
         <Route path="/homework" element={<SubmitHomework />} />
         <Route path="/aboutwebsite" element={<AboutWebsite />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
         {/* 如果你希望添加一个默认或根路由，可以像下面这样添加 */}
-       
       </Routes>
     </Router>
   );
