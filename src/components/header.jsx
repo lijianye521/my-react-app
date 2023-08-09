@@ -14,12 +14,12 @@ function CollapsibleExample() {
           <Nav className="me-auto">
             <Nav.Link href="features">主页</Nav.Link>
             <Nav.Link href="homework">提交作业</Nav.Link>
-            <NavDropdown title="下拉菜单" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="chatgpt">不知道写啥</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                空位1
+            <NavDropdown title="有趣系列" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="rocket">有趣的火箭🚀</NavDropdown.Item>
+              <NavDropdown.Item href="card">
+                有趣的卡牌
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">空位2</NavDropdown.Item>
+              <NavDropdown.Item href="clock">有趣的时钟</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 空位3
